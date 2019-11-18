@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>104薪酬白皮書</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
+    integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+  <script src="list.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,600&display=swap&subset=chinese-traditional"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="bg">
+    <div class="layout">
+      <header>
+        <div class="container-0">
+          <a class="logo" href="salary white paper.html">
+            <div class="logo"></div>
+          </a>
+          <div class="icon-0">
+            <div data-toggle="modal" data-target=".bd-example-modal-lg"><img src="img/元件-14.png" alt=""
+                style="cursor: pointer;"></div>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="text-align: center;">
+                  知道我的薪資落點<br>
+                  讓加薪變得容易
+                </div>
+              </div>
+            </div>
+
+            <div style="" class="a2a_kit a2a_default_style" data-a2a-url="https://lihi1.com/VCe4c" data-a2a-title="">
+              <a class="a2a_button_facebook">
+                <img src="img/元件-15.png" alt="">
+              </a>
+            </div>
+            <a href="mailto:marketing@104.com.tw" style="pointer-events: auto;">
+              <img src="img/元件-16.png" alt="">
+            </a>
+            <a href="https://lihi1.com/axnJr" target="_blank">
+              <img src="img/元件-17.png" alt="">
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="slide-overflow">
+          <ul class="slide" id="slide">
+            <li class="slide-unit u1" list="YearEndBonuses" id="u1">
+              <div class="x x1">X</div>
+              <div class="unit-container">
+                <div class="a">
+                  <img src="img\svg\元件-10.svg" alt="">
+                  <div class="unit-title">年終獎金<br>加薪幅度<br>TOP 5</div>
+                  <div class="description">辛苦一年獲得多少獎勵？明年可期嗎？</div>
+                </div>
+                <div class="b" id="u1canvas">
+                  <div class="prtoggle">
+                    <label>
+                      <input id='PR1' type="checkbox" name="" class="checkbox" onclick="PR1func()">
+                      <span class="btn-box">
+                        <span class="btn"></span>
+                      </span>
+                    </label>
+                    <span class="text">PR值</span>
+                  </div>
+                  <div class="tabs">
+                    <div class="tab" style='z-index:1;' onclick="u1tab1()">
+                      <svg class="triangle" width='30' height='30'>
+                        <polygon points='0,0,30,30,0,30' fill='#fff'></polygon>
+                      </svg>
+                      <div class="tabName">2019年終獎金</div>
+                    </div>
+                    <div class="tab" style="left:160px;background-color:#DCDCDC;" onclick="u1tab2()">
+                      <svg class="triangle" width='30' height='30'>
+                        <polygon points='0,0,30,30,0,30' fill='#DCDCDC'></polygon>
+                      </svg>
+                      <div class="tabName">2020年加薪幅度</div>
+                    </div>
+                  </div>
+                  <div class="user-input-bar">
+                    <div class="user-input-bar-flex">
+                      <div>我在</div>
+                      <select name=' industryList' id='u1List' onchange='UserInputIndustry(this.value)'
+                        class="industryList">
+                      </select>
+                    </div>
+                  </div>
+                  <a href="https://lihi1.com/axnJr" target="_blank">
+                    <div class="download-cover">
+                      完整訊息<br>請下載<br>104薪酬白皮書<br><img src="img\svg\元件-17.svg" alt="">
+                  </a>
+                </div>
+              </div>
+        </div>
+        </li>
+        <li class="slide-unit u2" list="Past5YearAnnualSalary" id="u2">
+
+          <div class="x x2">X</div>
+          <div class="unit-container">
+            <div class="a">
+              <img src="img\svg\元件-09.svg" alt="">
+              <div class="unit-title">年薪總額<br>年薪增幅<br>TOP 5</div>
+              <div class="description">哪些產業年薪最高？哪些產業薪水比5年前增幅最大？</div>
+            </div>
+            <div class="b" id="u2canvas">
+              <div class="prtoggle">
+                <label>
+                  <input id='PR2' type="checkbox" name="" class="checkbox" onclick="PR2func()">
+                  <span class="btn-box">
+                    <span class="btn"></span>
+                  </span>
+                </label>
+                <span class="text">PR值</span>
+              </div>
+              <div class="tabs">
+                <div class="tab" style='z-index:1;' onclick="u2tab1()" list="Past5YearAnnualSalary">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#fff'></polygon>
+                  </svg>
+                  <div class="tabName">2019年薪總額</div>
+                </div>
+                <div class="tab" style="left:150px;background-color:#DCDCDC;" onclick="u2tab2()">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#DCDCDC'></polygon>
+                  </svg>
+                  <div class="tabName">年薪增幅%</div>
+                </div>
+              </div>
+              <div class="user-input-bar">
+                <div class="user-input-bar-flex">
+                  <div>我在</div>
+                  <select name='industryList' id="u2List" onchange='UserInputIndustry(this.value)' class="industryList">
+                  </select>
+                  <div class="salary-line">年薪總額約：NTD<input type="text" name="NTD" id='salaryinput'
+                      style="width: 80px;">元
+                    <button onclick='UserInputSalary()'>查詢</button></div>
+                </div>
+              </div>
+              <a href="https://lihi1.com/axnJr" target="_blank">
+                <div class="download-cover">
+                  完整訊息<br>請下載<br>104薪酬白皮書<br><img src="img\svg\元件-17.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="slide-unit u3" id="u3">
+
+          <div class="x x3">X</div>
+          <div class="unit-container">
+            <div class="a">
+              <img src="img\svg\元件-08.svg" alt="">
+              <div class="unit-title">最夯職務<br>薪資<br>TOP 5</div>
+              <div class="description">薪資大黑馬、求職人數最多、企業需求最強。</div>
+            </div>
+            <div class="c" id="u3canvas">
+              <div class="tabs">
+                <div class="tab" style='z-index:1;' onclick="u3video('RO31uBHXZRk','a')">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#fff'></polygon>
+                  </svg>
+                  <div class="tabName">薪資大黑馬</div>
+                </div>
+                <div class="tab" style="left:150px;background-color:#DCDCDC;" onclick="u3video('E65ai8-wdow','b')">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#DCDCDC'></polygon>
+                  </svg>
+                  <div class="tabName">求職人數最多</div>
+                </div>
+                <div class="tab" style="left:300px;background-color:#DCDCDC;" onclick="u3video('BVYf5XkRV1g','c')">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#DCDCDC'></polygon>
+                  </svg>
+                  <div class="tabName">企業需求最強</div>
+                </div>
+              </div>
+              <div class="viideo-btns .a" style="display: flex;" id="aaa">
+                <div class="video-btn" onclick="u3video('RO31uBHXZRk','0')">2019年薪總額 TOP 5</div>
+                <div class="video-btn" onclick="u3video('nsV_SExMr9Q','0')">年薪比5年前增幅最大 TOP 5</div>
+                <div class="video-btn" onclick="u3video('EwvROMrfMm8','0')">2019獎金最高 TOP 5</div>
+                <div class="video-btn" onclick="u3video('ajBvIEOmbdU','0')">2019最依賴獎金 TOP 5</div>
+              </div>
+              <div class="viideo-btns .b" style="display: none;" id="bbb">
+                <div class="video-btn" onclick="u3video('E65ai8-wdow','0')">門市/店員/專櫃人員</div>
+                <div class="video-btn" onclick="u3video('GAuaeRLPAvc','0')">行政人員</div>
+                <div class="video-btn" onclick="u3video('BVYf5XkRV1g','0')">作業員/包裝員</div>
+                <div class="video-btn" onclick="u3video('Uu4O8Jx5hCM','0')">餐飲服務生</div>
+                <div class="video-btn" onclick="u3video('vqa_06kGrL0','0')">國內業務</div>
+              </div>
+              <div class="viideo-btns .c" style="display: none;" id="ccc">
+                <div class="video-btn" onclick="u3video('Uu4O8Jx5hCM','0')">餐飲服務生</div>
+                <div class="video-btn" onclick="u3video('E65ai8-wdow','0')">門市/店員/專櫃人員</div>
+                <div class="video-btn" onclick="u3video('vqa_06kGrL0','0')">國內業務</div>
+                <div class="video-btn" onclick="u3video('BVYf5XkRV1g','0')">作業員/包裝員</div>
+                <div class="video-btn" onclick="u3video('ogUISarZJDo','0')">軟體設計工程師</div>
+              </div>
+              <div class="u3-video" id="u3video">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RO31uBHXZRk"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide-unit u4" id="u4">
+          <div class="x x4">X</div>
+          <div class="unit-container">
+            <div class="a">
+              <img src="img\svg\元件-19.svg" alt="">
+              <div class="unit-title">加薪<br>看這裡<br>
+              </div>
+              <div class="description">凍薪多久了？如何幫自己加薪。</div>
+            </div>
+            <div class="c" id="u4canvas">
+              <div class="tabs">
+                <div class="tab" style='z-index:1;' onclick="u4video('5vKWQWjgcFc')">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#fff'></polygon>
+                  </svg>
+                  <div class="tabName">「轉職」談到好薪水</div>
+                </div>
+                <div class="tab" style="left:160px;background-color:#DCDCDC;" onclick="u4video('-u9M72K00gk')">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#DCDCDC'></polygon>
+                  </svg>
+                  <div class="tabName">「在職」談到好薪水</div>
+                </div>
+                <div class="tab" style="left:320px;background-color:#DCDCDC;" onclick="u4video('1eQUmQz6sdw')">
+                  <svg class="triangle" width='30' height='30'>
+                    <polygon points='0,0,30,30,0,30' fill='#DCDCDC'></polygon>
+                  </svg>
+                  <div class="tabName">幫自己加薪</div>
+                </div>
+              </div>
+              <div class="u4-video" id="u4video">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5vKWQWjgcFc"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide-unit u5" id="u5" style="background-color: rgba(255,255,255,0.4);">
+          <div class="x x5" style="background-color: rgba(255,255,255,0.4);
+color: #fff;">X</div>
+          <div class="unit-container">
+            <div class="a" style="background-color: rgba(255,255,255);border-radius: 10px 0px 10px 10px;">
+              <img src=" img\svg\元件-07.svg" alt="">
+              <div class="unit-title">薪酬<br>新典範</div>
+              <div class="description">掌聲人物在職場拼搏的精神更甚收入增加。</div>
+            </div>
+            <div class="c" id="u5canvas">
+              <div class="people">
+                <a href="https://lihi1.com/TRx9R" target="_blank">
+                  <div class="outside">
+                    <div class="inside">
+                      <img class="bravo" src="img/【掌聲】高淑娟.png" alt="">
+                    </div>
+                    <div class="bravo-word" style="text-align: center;line-height: 40px;">年薪千萬&nbsp;超級業務<br>高淑娟</div>
+                  </div>
+                </a>
+                <a href="https://bravo.104.com.tw/104bravo-kimi/" target="_blank">
+                  <div class="outside">
+                    <div class="inside">
+                      <img class="bravo" src="img/46【掌聲】閻耀平.png" alt="">
+                    </div>
+                    <div class="bravo-word" style="text-align: center;line-height: 40px;">貼圖創作&nbsp;幫自己加薪<br>Kimi</div>
+                  </div>
+                </a>
+                <a href="https://bravo.104.com.tw/104bravo-weather-taiwan-huang/" target="_blank">
+                  <div class="outside">
+                    <div class="inside">
+                      <img class="bravo" src="img/06【掌聲】黃昱維.png" alt="">
+                    </div>
+                    <div class="bravo-word" style="text-align: center;line-height: 40px;">斜桿創業&nbsp;多重收入<br>黃昱維
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide-unit u6" id="u6">
+          <div class="x x6">X</div>
+          <div class="unit-container">
+            <div class="a">
+              <img src="img\svg\元件-06.svg" alt="">
+              <div class="unit-title">104<br>提供幫助</div>
+              <div class="description">薪資情報、薪酬調查、履歷診療、外包網、掌聲。</div>
+            </div>
+            <div class="c" id="u6canvas">
+              <div class="survice">
+                <a href="https://www.104.com.tw/jb/wage/view?wf=alertbar" target="_blank">
+                  <div class="support-outside">
+                    <div class="survice-icon" style="background-image: url(img/svg/元件-01.svg);"></div>
+                    <div class="support-inside">
+                      <div class="survice-name">薪資情報</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://hr.pro.104.com.tw/product/%E8%96%AA%E9%85%AC%E8%AA%BF%E6%9F%A5/" target="_blank">
+                  <div class="support-outside">
+                    <div class="survice-icon" style="background-image: url(img/svg/元件-02.svg);"></div>
+                    <div class="support-inside">
+                      <div class="survice-name">薪酬調查</div>
+
+                    </div>
+                  </div>
+                </a>
+                <a href="https://resume-clinic.104.com.tw/" target="_blank">
+                  <div class="support-outside">
+                    <div class="survice-icon" style="background-image: url(img/svg/元件-03.svg);"></div>
+                    <div class="support-inside">
+                      <div class="survice-name">履歷診療</div>
+
+                    </div>
+                  </div>
+                </a>
+                <a href="https://case.104.com.tw/" target="_blank">
+                  <div class="support-outside">
+                    <div class="survice-icon" style="background-image: url(img/svg/元件-04.svg);"></div>
+                    <div class="support-inside">
+                      <div class="survice-name">外包網</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://bravo.104.com.tw/" target="_blank">
+                  <div class="support-outside">
+                    <div class="survice-icon" style="background-image: url(img/svg/元件-05.svg);"></div>
+                    <div class="support-inside">
+                      <div class="survice-name">掌聲人物</div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+
+
+    </footer>
+  </div>
+  <!-- <svg id='pointer0'></svg> -->
+  <image xlink:href="images/20130821.svg" width="75" height="75" />
+  </div>
+
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"
+    integrity="sha256-+9Mf3cAVmxxudDsr1XwXUeRZFtvdWVYdq5/vcgiYyNU=" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3-axis.v1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.min.js"
+    integrity="sha256-NtPQd/Jy7Ze2E72YS8WJDGMu6xFYomLYibE0hpyLTjs=" crossorigin="anonymous"></script>
+  <script async src="https://static.addtoany.com/menu/page.js">
+  </script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
